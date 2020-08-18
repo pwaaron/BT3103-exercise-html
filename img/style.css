@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns that float next to each other */
+/*navigation column*/
+nav {
+  float: left;
+  width: 30%;
+  background: #ccc;
+  padding-right: 20px;
+  height: 300px; 
+}
+    
+picbar {
+  float: left;
+  width: 400;
+  padding-right: 20px; 
+}
+
+/* Style the paragraph inside the navigation */
+nav p {
+  text-align:center;
+  padding-top:40px;
+}
+
+/* Style the main content column beside navigation*/
+#content {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; 
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}

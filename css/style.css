@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #4B0E8F;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns that float next to each other */
+/*navigation column*/
+nav {
+  float: left;
+  width: 30%;
+  background: #D37AFF;
+  padding-right: 20px;
+  height: 70%; 
+}
+    
+picbar {
+  float: left;
+  width: 400;
+  padding-right: 100px; 
+}
+
+/* Style the paragraph inside the navigation */
+nav p {
+  text-align:center;
+  padding-top:40px;
+  font-weight: bold;
+  font-size: 200%;
+
+}
+
+nav p a{
+  text-decoration: none;  
+  color:#6D288F;
+}
+
+/* Style the main content column beside navigation*/
+#content {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 70%; 
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #4B0E8F;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+footer p a{
+  color: white;
+}
+
+footer p a:hover{
+  color: #D37AFF;
+}
+
+/* Headers */
+h2{
+  background-color: #AD53DB;
+  color:white;
+  font-weight: bold;
+}
+
+/* Menu Tables */
+table.menu {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tr:nth-child(odd) {
+  background-color: #BDDB53;
+}
+
+td.menu-title{
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+td.menu-desc{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
