@@ -5,6 +5,36 @@
 </head>
 
 <body>
+  <script>
+    function showName(name){
+        
+        var cnt = 0; 
+        for (x of name) {
+          if (x != ' '){
+            cnt = cnt + 1;
+          }
+        }
+
+        document.getElementById("show_name").innerHTML = "Your name is confirmed as " + name + ". Length is " + cnt;
+    }
+
+    function showEmail(email){
+        document.getElementById("show_email").innerHTML = "Your email is confirmed as " + email + ".";
+    }
+
+    function turnRed() {
+        document.getElementById("notifications").style.color = "red";
+      }
+
+    function turnBlue() {
+        document.getElementById("notifications").style.color = "blue";
+      }
+
+    function submitAlert(){
+      alert("Form successfully submitted!");
+    }
+  </script>
+
   <header>
     <h1>BEST BUBBLE</h1>
     <h3> <i> BUBBLE TEA SHOP</i> </h3>
@@ -24,19 +54,27 @@
       <p>Want to work at BestBubble? Fill out the form below to start your application.</p>
       <form>
         <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" name="name" onchange="showName(this.value)" required><br>
+        <p id="show_name"></p>
         <br>
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" name="email" onchange="showEmail(this.value)"required><br>
+        <p id="show_email"></p>
         <br>
         <label for="startdate">Start date:</label><br>
-        <input type="date" id="startdate" name="startdate" required><br>
+        <input type="date" name="startdate" required><br>
         <br>
         <label for="exp">Experience:</label><br>        
         <textarea name="exp" rows="10" cols="60" required></textarea><br>
         <br>
-        <input type="submit" value="Submit">
+        <button type="submit" value="Submit" onclick="submitAlert()"> Submit </button>
       </form>
+      
+      
+      <p id="notifications">Do you want to be notified by email about BestBubble promotions?</p>
+
+      <button type="button" onclick='turnRed()'>Yes</button> <button type="button" onclick='turnBlue()'>No</button>
+
     </div>
   </section>
 
